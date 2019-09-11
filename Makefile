@@ -1,4 +1,4 @@
-UUID = darkthemetoggle@jacob.mischka.me
+UUID = darkthemetoggle@feichtmeier.me
 EXTENSIONS_DIR = ~/.local/share/gnome-shell/extensions
 
 .PHONY: install link
