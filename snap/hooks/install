@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir -p /usr/share/gnome-shell/extensions
+
+ln -s /snap/gnome-shell-extension-dark-theme-toggle/current /usr/share/gnome-shell/extensions/darkthemetoggle@jacob.mischka.me
+
+gnome-shell-extension-tool -e darkthemetoggle@jacob.mischka.me

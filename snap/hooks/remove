@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+gnome-shell-extension-tool -d darkthemetoggle@jacob.mischka.me
+
+rm /usr/share/gnome-shell/extensions/darkthemetoggle@jacob.mischka.me
