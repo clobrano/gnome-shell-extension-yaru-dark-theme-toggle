@@ -1,0 +1,13 @@
+name: gnome-shell-extension-dark-theme-toggle
+version: '1.0'
+summary: Dark Theme Toggle
+description: Toggles between Adwaita and Adwaita-dark
+
+grade: stable  
+confinement: classic 
+base: core18
+
+parts:
+  gnome-shell-extension-dark-theme-toggle:
+    plugin: dump
+    source: darkthemetoggle@jacob.mischka.me/
