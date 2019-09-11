@@ -1,4 +1,4 @@
-name: gnome-shell-extension-dark-theme-toggle
+name: gnome-shell-extension-yaru-dark-theme-toggle
 version: '1.0'
 summary: Yaru Dark Theme Toggle
 description: Toggles between Yaru and Yaru-dark
@@ -8,6 +8,6 @@ confinement: classic
 base: core18
 
 parts:
-  gnome-shell-extension-dark-theme-toggle:
+  gnome-shell-extension-yaru-dark-theme-toggle:
     plugin: dump
-    source: darkthemetoggle@feichtmeier.me/
+    source: yarudarkthemetoggle@feichtmeier.me/
