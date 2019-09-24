@@ -12,10 +12,20 @@ const THEME_KEY = 'gtk-theme';
 const LIGHT_THEME = 'Yaru';
 const DARK_THEME = 'Yaru-dark';
 
-let button, settings;
+let button, settings, themes;
+
+function Theme(name, next) {
+    this.name = name;
+    this.next = next;
+}
 
 function init() {
 	settings = new Gio.Settings({ schema: SCHEMA_KEY });
+    themes = [
+        new Theme('Yaru', 'Yaru-dark'),
+        new Theme('Yaru-dark', 'Yaru-light'),
+        new Theme('Yaru-light', 'Yaru'),
+    ];
 }
 
 function toggleTheme() {
@@ -24,8 +34,14 @@ function toggleTheme() {
         return;
     }
 
-	const newTheme = curTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
-	settings.set_string(THEME_KEY, newTheme);
+    let theme;
+    for (theme of themes) {
+        if (!(curTheme === theme.name)) {
+            continue;
+        }
+
+        settings.set_string(THEME_KEY, theme.next);
+    }
 }
 
 function enable() {
