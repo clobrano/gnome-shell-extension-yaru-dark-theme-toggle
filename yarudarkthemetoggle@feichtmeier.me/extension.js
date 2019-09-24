@@ -19,10 +19,12 @@ function init() {
 }
 
 function toggleTheme() {
-	const newTheme = settings.get_string(THEME_KEY) === LIGHT_THEME
-		? DARK_THEME
-		: LIGHT_THEME;
+    const curTheme = settings.get_string(THEME_KEY);
+    if (!curTheme || !curTheme.includes('Yaru')) {
+        return;
+    }
 
+	const newTheme = curTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
 	settings.set_string(THEME_KEY, newTheme);
 }
 
